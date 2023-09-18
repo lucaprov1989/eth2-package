@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  kurtosis-docs-checker: kurtosis-tech/docs-checker@0.2.3
+  kurtosis-docs-checker: lucaprov1989/docs-checker@0.2.3
 
 executors:
   ubuntu_vm:
@@ -9,7 +9,7 @@ executors:
       image: ubuntu-2004:202201-02
 
 parameters:
-  # To enable/disabled the check_latest_version workflow execution which will be triggered by this scheduled pipeline: https://app.circleci.com/settings/project/github/kurtosis-tech/eth2-package/triggers
+  # To enable/disabled the check_latest_version workflow execution which will be triggered by this scheduled pipeline: https://app.circleci.com/settings/project/github/lucaprov1989/eth2-package/triggers
   should-enable-check-latest-version-workflow:
     type: boolean
     default: false
@@ -21,7 +21,7 @@ parameters:
 # Install go version 1.19 to run our integration tests on the minimal version we support
 setup_kurtosis: &setup_kurtosis
   - run: |
-      echo "deb [trusted=yes] https://apt.fury.io/kurtosis-tech/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
+      echo "deb [trusted=yes] https://apt.fury.io/lucaprov1989/ /" | sudo tee /etc/apt/sources.list.d/kurtosis.list
       sudo apt update
       sudo apt install kurtosis-cli
       kurtosis config init dont-send-metrics
@@ -201,7 +201,7 @@ workflows:
             {
                 "ignorePatterns": [
                     {
-                        "pattern": "https://github.com/kurtosis-tech/eth2-package"
+                        "pattern": "https://github.com/lucaprov1989/eth2-package"
                     }
                 ]
             }

@@ -1,6 +1,6 @@
-shared_utils = import_module("github.com/kurtosis-tech/eth2-package/src/shared_utils/shared_utils.star")
-mev_boost_context_module = import_module("github.com/kurtosis-tech/eth2-package/src/mev_boost/mev_boost_context.star")
-parse_input = import_module("github.com/kurtosis-tech/eth2-package/src/package_io/parse_input.star")
+shared_utils = import_module("github.com/lucaprov1989/eth2-package/src/shared_utils/shared_utils.star")
+mev_boost_context_module = import_module("github.com/lucaprov1989/eth2-package/src/mev_boost/mev_boost_context.star")
+parse_input = import_module("github.com/lucaprov1989/eth2-package/src/package_io/parse_input.star")
 
 FLASHBOTS_MEV_BOOST_PROTOCOL = "TCP"
 
@@ -34,7 +34,7 @@ def get_config(mev_boost_launcher, network_id, mev_boost_image):
 		cmd = command,
 		env_vars = {
 			# TODO(maybe) remove the hardcoding
-			# This is set to match this file https://github.com/kurtosis-tech/eth-network-package/blob/main/static_files/genesis-generation-config/cl/config.yaml.tmpl#L11
+			# This is set to match this file https://github.com/lucaprov1989/eth-network-package/blob/main/static_files/genesis-generation-config/cl/config.yaml.tmpl#L11
 			# latest-notes
 			# does this need genesis time to be set as well
 			"GENESIS_FORK_VERSION": "0x10000038",

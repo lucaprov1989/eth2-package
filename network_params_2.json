@@ -1,0 +1,11 @@
+{
+  "participants": [
+    {
+      "el_client_type": "reth",
+      "el_client_image": "reth_builder",
+      "cl_client_type": "lighthouse",
+      "cl_client_image": "",
+      "count": 1
+    }
+  ]
+}
